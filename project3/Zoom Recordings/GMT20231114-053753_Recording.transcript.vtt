@@ -1,0 +1,286 @@
+WEBVTT
+
+1
+00:00:02.300 --> 00:00:05.790
+Samuel Wait: Okay, so this is my calculator.
+
+2
+00:00:06.010 --> 00:00:18.309
+Samuel Wait: Ui Java. Here. Now go ahead and run that and demonstrate some of the calculations. As you can see it. Kind of, you know, changes size depending on how big you make the size.
+
+3
+00:00:19.330 --> 00:00:29.280
+Samuel Wait: So you know, these functions all work.  yeah.
+
+4
+00:00:30.760 --> 00:00:35.719
+Samuel Wait: And so I'm just going to show that off real quick. And then,
+
+5
+00:00:37.100 --> 00:00:39.859
+Samuel Wait: yeah, go ahead and do that, that that
+
+6
+00:00:39.890 --> 00:00:42.159
+Samuel Wait: these are all the trig functions.
+
+7
+00:00:42.340 --> 00:00:46.989
+Samuel Wait: And then the cancel button obviously works. And we have
+
+8
+00:00:47.280 --> 00:00:50.070
+Samuel Wait: yeah, these other functions, these common functions?
+
+9
+00:00:50.410 --> 00:00:59.290
+Samuel Wait:  yeah. So those all clearly work. And you know, they all have different
+
+10
+00:00:59.600 --> 00:01:13.880
+Samuel Wait: colors depending on their group. See, all the trick functions are one colors. All the comment functions are one color, all the primitive functions are one color, and the number panel is all one color, and I went and gave the cancel button, even though it is part of the number panel
+
+11
+00:01:14.030 --> 00:01:25.449
+Samuel Wait:  or the keypad panel. Basically. I gave it different colors because it's a cancel button. It's kind of important one. And I gave it red to kind of catch the eye.
+
+12
+00:01:25.560 --> 00:01:29.520
+Samuel Wait: Yeah. And so going into the actual ui and the refactoring
+
+13
+00:01:29.560 --> 00:01:33.870
+Samuel Wait: so went ahead and created a
+
+14
+00:01:35.000 --> 00:01:43.490
+Samuel Wait: you know, this is kind of all the same, up here. I don't see a reason to change that except for, like the border layout gave it that
+
+15
+00:01:43.850 --> 00:01:49.510
+I for the Jtech area. I went ahead and set it to false or editable editable with false.
+
+16
+00:01:49.520 --> 00:01:53.900
+Samuel Wait: And so, as you can see, you know, I can't. Okay, oops.
+
+17
+00:01:54.600 --> 00:02:02.329
+Samuel Wait: I can't type in that at all, no matter how much I try. Yeah, you have to use the key guys.
+
+18
+00:02:03.040 --> 00:02:04.900
+Samuel Wait: so yeah, going into it.
+
+19
+00:02:05.450 --> 00:02:10.670
+Samuel Wait: You know when we're creating all these J buttons here. I went ahead and added the action listeners into that
+
+20
+00:02:10.690 --> 00:02:14.590
+Samuel Wait: that just kind of made sense to me because we're doing that, anyway.
+
+21
+00:02:14.800 --> 00:02:18.390
+Samuel Wait: or iterating through that array, anyway.
+
+22
+00:02:18.620 --> 00:02:24.230
+Samuel Wait: To add the numbers. And then I did the same thing with the C
+
+23
+00:02:24.250 --> 00:02:28.430
+Samuel Wait: or the cancel J button. Just again it made sense to me.
+
+24
+00:02:29.290 --> 00:02:33.279
+So then we get into the initialization function.
+
+25
+00:02:33.390 --> 00:02:43.509
+Samuel Wait:  yeah, that's all in the constructor up there. So again, initialization constructor or function. I went ahead and just did.
+
+26
+00:02:43.640 --> 00:03:02.990
+Samuel Wait: you know, we already had the buttons, the J button buttons array, but I went ahead and made a button name of strings. It's kinda as a parallel array there so that way when I'm creating this hash map here. I'm iterating through the J buttons array. I could first add the action listener and then also
+
+27
+00:03:03.920 --> 00:03:09.760
+Samuel Wait: you know, map each of those J buttons to their corresponding string.
+
+28
+00:03:09.920 --> 00:03:17.359
+Samuel Wait: that just makes it easier to access each of those J buttons when we pass it into the constructors down here when we're creating the panels.
+
+29
+00:03:17.400 --> 00:03:28.689
+Samuel Wait: So I went ahead and use the extract method to group all this kind of code together for the panels and the J buttons.
+
+30
+00:03:29.220 --> 00:03:39.980
+Samuel Wait: well, again, all the J buttons are made up here, but you know we pass that hash map like, I said, with the string, and then the J button key value pair there
+
+31
+00:03:40.480 --> 00:03:48.310
+Samuel Wait: into each of their constructors. So going into that, you know, they're all come from the abstract class talk panel, calculator panel.
+
+32
+00:03:48.790 --> 00:03:56.330
+Samuel Wait:  So we have the J panel, panel. variable or member
+
+33
+00:03:56.840 --> 00:04:05.489
+Samuel Wait: variable, and the grid layout grid number variable because they all share that? Do. They all have their own instances of it in their own objects?
+
+34
+00:04:06.080 --> 00:04:18.710
+Samuel Wait: When they're instantiated, and then we also have to get panel that just returns the panel again. They all share that, and they all use that and it's the only other function that we have other than a constructor in each of these.
+
+35
+00:04:19.149 --> 00:04:26.830
+Samuel Wait: just because the constructor, you know, we create the panel based on what's passed to it. And then we just need to get the panel, and that's all we need this to do.
+
+36
+00:04:26.840 --> 00:04:36.300
+Samuel Wait:  So going into it, I'm gonna go into trig primitive and function panel first just because nump panel is kind of its own separate thing.
+
+37
+00:04:36.310 --> 00:04:40.649
+Samuel Wait: Though it is similar and does also extending
+
+38
+00:04:40.700 --> 00:04:50.179
+Samuel Wait: calculator panel. So going into trig panel. These all kind of work the same. Actually, they all exactly work the same
+
+39
+00:04:50.350 --> 00:05:05.379
+Samuel Wait: but they have different conditional statements, obviously just and different grid layouts. So they each they all take in their constructor a hash map the hash map OP operation buttons
+
+40
+00:05:05.960 --> 00:05:08.010
+Samuel Wait: all buttons.
+
+41
+00:05:08.530 --> 00:05:14.729
+Samuel Wait: And again, that's a key value pair string and J. Button of all the J. Buttons that we created a second ago in that loop.
+
+42
+00:05:14.840 --> 00:05:22.839
+Samuel Wait:  And again, they also already have that action listener? There, so that helps out
+
+43
+00:05:22.960 --> 00:05:36.579
+Samuel Wait: because it just kind of carries it all through. And so we added to the panel. They already have the action listener. So yeah, going into trick panel. You know, we create the grid layout with rows and columns there and then we create a J. Panel with that grid.
+
+44
+00:05:36.760 --> 00:05:55.640
+Samuel Wait: Then we iterate through the key set based on the button name. So if the button name is equal to in this example. You know sign cosine, tan arcsign, arcoside arcan, or inverse those inverse trick functions there. So if we find any of those in that key.
+
+45
+00:05:56.680 --> 00:05:59.339
+Samuel Wait: you know. Set there.
+
+46
+00:06:00.940 --> 00:06:03.510
+Samuel Wait: Then. Yeah, we go ahead and get
+
+47
+00:06:03.620 --> 00:06:15.239
+Samuel Wait: get that J button based on the button name, and we set the opaque to true, we set the border painted to false to remove those borders, and then we set a background color. As you saw
+
+48
+00:06:15.250 --> 00:06:27.039
+Samuel Wait: there. So yeah. So for the trig functions here, they're down here, and that is cyan and then we add each of those buttons to the panel in the order that they're found.
+
+49
+00:06:27.880 --> 00:06:38.660
+Samuel Wait: And so we do the same thing for the primitive panel. As you can see here, just with dark gray, and obviously a different conditional statement, and the function panel as well. Same thing, light, gray, etc.
+
+50
+00:06:38.960 --> 00:06:46.129
+Samuel Wait: So again, that uses the extract method. So all the code for each of those buttons and panels.
+
+51
+00:06:46.180 --> 00:06:49.320
+Samuel Wait: or each of those panels is grouped together there.
+
+52
+00:06:50.650 --> 00:06:53.480
+Samuel Wait: and yeah, so that uses that.
+
+53
+00:06:53.540 --> 00:07:12.669
+Samuel Wait: And then we have the number panel again. This kind of does the same thing. Just it doesn't use the hash map. So we have. We just iterate through one through 10 and do the same thing, opaque or painted false. And then we set the background to gray, and we add that button J. Button to the panel
+
+54
+00:07:13.070 --> 00:07:23.100
+Samuel Wait: and so I do. One through 9 here. Because I wanted the keep had to look like this. We have, you know, 1, 3, 4, 5, 6, 7, 8, 9 each
+
+55
+00:07:23.590 --> 00:07:26.999
+set of 3 in their own row.
+
+56
+00:07:27.330 --> 00:07:33.270
+Samuel Wait: And then in that last row we have 0 Andy canceled button. So we do that separately down here?
+
+57
+00:07:33.300 --> 00:07:37.619
+Samuel Wait: And then yes, if the the background for the cancel or red, because I wanted red.
+
+58
+00:07:37.720 --> 00:07:43.260
+and then we add those 2 buttons to the J. Panel. And so that's pretty straightforward there. So
+
+59
+00:07:43.620 --> 00:07:45.369
+Samuel Wait: you know.
+
+60
+00:07:56.440 --> 00:07:59.110
+and so this kind of uses the
+
+61
+00:08:00.050 --> 00:08:11.050
+Samuel Wait: the replace method with a method object here. So just because, you know, for trig panel, primitive panel and function panel, we can group them into kind of their own thing.
+
+62
+00:08:11.060 --> 00:08:26.050
+Samuel Wait:  we have to kind of do a number panel for their own class, just because and not have it be exactly like these 3, just because it's so different and takes different parameters.
+
+63
+00:08:26.130 --> 00:08:37.349
+Samuel Wait: so yeah, that makes sense to me. And so that then down here we have the number panel. Yeah. So we have each of these panels being created and again instantiated past.
+
+64
+00:08:37.559 --> 00:08:49.990
+Samuel Wait: Their parameters are the you know, for the number panel, the J. Buttons array, and the cancel J. Button, and then for a prim primitive handle function boundary panel, the operation buttons hashmap.
+
+65
+00:08:50.780 --> 00:08:59.410
+Samuel Wait: We then use the git panel to get the panels from the objects, and so then equal to the number panels outside of the
+
+66
+00:08:59.700 --> 00:09:02.720
+Samuel Wait: classes or the objects.
+
+67
+00:09:03.080 --> 00:09:09.490
+Samuel Wait: yeah. So just to get those panels, and then we add them to the frame that we created earlier.
+
+68
+00:09:10.320 --> 00:09:12.299
+Samuel Wait: And so first we add the text
+
+69
+00:09:12.370 --> 00:09:21.010
+Samuel Wait: panel that we created way earlier. And so, since the frame is a border layout to kind of keep it malleable.
+
+70
+00:09:21.580 --> 00:09:40.689
+Samuel Wait: Yeah, we use the border layout dot the border layout methods to kind of arrange where they are on the calculator. So say for text. We have page start. So that's at the top there as it should be. And then we have the function panel that we add, and so that ends up going on the left. So line start and so on.
+
+71
+00:09:41.080 --> 00:09:45.189
+Samuel Wait: and then, yeah, we set the frame to be visible, and that's that.
+
